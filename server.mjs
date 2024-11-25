@@ -20,7 +20,7 @@
 
 import { readFile } from "node:fs";
 
-readFile("./files/file.txt", (err, data) => {
+readFile("./files/file.txt", "utf8", (err, data) => {
   if (err) throw err;
-  console.log(data.toString());
+  console.log(data);
 });
