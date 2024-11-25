@@ -20,6 +20,7 @@
 
 // import { readFile } from "node:fs";
 
+const { log } = require("node:console");
 const fs = require("node:fs");
 
 fs.readFile("./files/file.txt", "utf8", (err, data) => {
@@ -28,6 +29,8 @@ fs.readFile("./files/file.txt", "utf8", (err, data) => {
 });
 
 process.on("uncaughtException", (err) => {
-  console.error(err, "Uncaught Exception thrown");
+  console.error(`Uncaught Exception thrown ${err}`);
   process.exit(1);
 });
+
+console.log("hi cooper");
