@@ -1,7 +1,7 @@
 // console.log("hello cooper");
 
 // const os = require("os");
-// const path = require("path");
+const path = require("path");
 
 // console.log(os.type());
 // console.log(os.version());
@@ -23,7 +23,7 @@
 const { log } = require("node:console");
 const fs = require("node:fs");
 
-fs.readFile("./files/file.txt", "utf8", (err, data) => {
+fs.readFile(path.join(__dirname, "files", "file.txt"), "utf8", (err, data) => {
   if (err) throw err;
   console.log(data);
 });
