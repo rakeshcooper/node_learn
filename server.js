@@ -26,3 +26,8 @@ fs.readFile("./files/file.txt", "utf8", (err, data) => {
   if (err) throw err;
   console.log(data);
 });
+
+process.on("uncaughtException", (err) => {
+  console.error(err, "Uncaught Exception thrown");
+  process.exit(1);
+});
