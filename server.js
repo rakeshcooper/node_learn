@@ -18,9 +18,11 @@
 // console.log(mul(6, 3));
 // console.log(div(6, 3));
 
-import { readFile } from "node:fs";
+// import { readFile } from "node:fs";
 
-readFile("./files/file.txt", "utf8", (err, data) => {
+const fs = require("node:fs");
+
+fs.readFile("./files/file.txt", "utf8", (err, data) => {
   if (err) throw err;
   console.log(data);
 });
