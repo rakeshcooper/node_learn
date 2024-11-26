@@ -25,8 +25,8 @@ async function fileops() {
       "\n\n cooper is ate is lunch, this appended line"
     );
     console.log("append complete");
-    await fsPromise.unlink(path.join(__dirname, "files", "update.txt"));
-    console.log("update.txt delete");
+    // await fsPromise.unlink(path.join(__dirname, "files", "update.txt"));
+    // console.log("update.txt delete");
   } catch (err) {
     console.error(err);
   }
