@@ -9,6 +9,8 @@ const ws = fs.createWriteStream(
   path.join(__dirname, "files", "new_big_file.txt")
 );
 
-rs.on("data", (datachunk) => {
-  ws.write(datachunk);
-});
+// rs.on("data", (datachunk) => {
+//   ws.write(datachunk);
+// });
+
+rs.pipe(ws);
